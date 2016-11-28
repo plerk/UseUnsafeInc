@@ -2,9 +2,7 @@ language: perl
 sudo: false
 
 install:
-  - perlbrew list
-  - dzil authordeps --missing | cpanm -n
-  - dzil listdeps   --missing | cpanm -n
+  - /bin/true
 
 perl:
   - "5.8"
@@ -18,4 +16,4 @@ perl:
   - "5.24"
 
 script:
-  - dzil test -v
+  - prove -lv
